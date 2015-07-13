@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Little book of Linux, by Scott Mebberson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/github-light.css" media="screen">
   </head>
   <body>
+
     <section class="page-header">
       <h1 class="project-name">Little book of Linux</h1>
       <h2 class="project-tagline">A cheat sheet to Linux. Things I&#39;ve learnt along the way.</h2>
@@ -19,16 +20,37 @@
     </section>
 
     <section class="main-content">
+
       <h1>
-<a id="my-little-book-of-all-things-linux" class="anchor" href="#my-little-book-of-all-things-linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>My little book of all things Linux</h1>
+<a id="my-little-book-of-all-things-linux" class="anchor" href="#my-little-book-of-all-things-linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Back to index</h1>
 
-      <p>A quite simple reference to everything I've learnt about linux. I'm not a systems administer. I'm a web-ops focussed web developer.</p>
+      <h2>Users and groups</h2>
 
-      <p>If you're not overly familiar with Linux, this might be a good resource for you.</p>
+      <div class="group">
+        <h3>Switching user</h3>
+        <pre><code>su - {user} -s /bin/sh</code></pre>
+        <div class="explanation">
+          <p>This will switch to the specified <code>user</code>, with the shell <code>/bin/sh</code>.</p>
+        </div>
+      </div>
 
-      <ul>
-        <li><a href="content/users-and-groups.html">Users and groups</a></li>
-      </ul>
+      <div class="group">
+        <h3>Show all groups</h3>
+        <pre><code>getent group</code></pre>
+        <div class="explanation">
+          <p>This will show all groups on the system. The output is broken down as follows:</p>
+          <pre><code>group:x:24:user1,user2
+|     | |  |
+1     2 3  4
+</code></pre>
+          <ol>
+            <li><b>Group name</b>: the name of the group.</li>
+            <li><b>Password</b>: generally password is left blank.</li>
+            <li><b>GID</b>: the id of the group.</li>
+            <li><b>Group list</b>: the list of users that belong to the group.</li>
+          </ol>
+        </div>
+      </div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/smebberson/little-book-of-linux">Little-book-of-linux</a> is maintained by <a href="https://github.com/smebberson">smebberson</a>.</span>
