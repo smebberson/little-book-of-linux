@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "little-book-of-linux",
+  "version": "0.1.0",
+  "description": "A website with information about using Linux within web development.",
+  "author": "Scott Mebberson",
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
+}
